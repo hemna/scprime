@@ -1,7 +1,10 @@
 FROM ubuntu:20.04
 
+RUN apt-get update
+RUN apt-get install -y iputils-ping
+
 ENV PATH /opt/scprime/bin:$PATH
-ENV SCPRIME_MODULES gctwhr
+ENV SCPRIME_MODULES gctwh
 ENV SCPRIME_DATA_DIR /opt/scprime/data
 ENV DAEMON_DATA_DIR /opt/scprime/daemon-data
 
